@@ -11,6 +11,5 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
     http.HandleFunc("/", handler)
-    fmt.Println("Servidor corriendo en http://localhost:8585")
     http.ListenAndServe(":8585", nil)
 }
