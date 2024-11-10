@@ -29,10 +29,10 @@ Before running this project, you must have the following programs:
    - Navigate to the folder where you unzipped the project and go into the `exercise4go` project folder.
    - Open a terminal or command prompt (CMD) inside this folder. On Windows, you can right-click the folder and select **"Open PowerShell window here"**.
 
-3. **Build the Go Application**:
+3. **Build the Docker image**:
 
      Run the following command in the terminal to build the Docker image:
-        docker build -t mi/exercise4go .
+        docker build -t meybili/exercise4go .
 
 4. **Run the Application**:
 
