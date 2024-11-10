@@ -1,17 +1,20 @@
-# Use a Go base image
-FROM golang:1.20-alpine
+# Usa una imagen base de Go
+FROM golang:1.20
 
-# Set the working directory in the container
+# Establece el directorio de trabajo
 WORKDIR /app
 
-# Copy the source code to the container
+# Copia el código fuente al contenedor
 COPY . .
 
-# Compile the Go archive
+# Inicializa el módulo de Go
+RUN go mod tidy
+
+# Compila la aplicación
 RUN go build -o main .
 
-# Expose the port where the server will run
+# Expón el puerto en el que correrá la app
 EXPOSE 8585
 
-# Run the application
+# Ejecuta la aplicación
 CMD ["./main"]
